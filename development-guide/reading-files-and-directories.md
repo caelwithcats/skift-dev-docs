@@ -13,9 +13,9 @@ int main()
 {
     const char* file = "/at/some/path/file.txt";
     
-    if (file_exist(file))
+    if (!file_exist(file))
     {
-        handle_printf_error(stream, "Cannot access file \"%s\"", file);
+        printf("Cannot access file \"%s\". No such file", file);
         return -1;
     }
     
@@ -26,30 +26,21 @@ int main()
     stream_stat(stream, &stat);
 
     size_t read;
-    // This a temporary buffer used by stream_read
-    char buffer[1024];
+    // The size and buffer variables are temporary used by the file_read_all function
+    size_t size;
+    void* buffer;
     
-    while ((read = stream_read(stream, &buffer, 1024)) != 0)
+    Result file_result = file_read_all(file, &buffer, &size)
+    if(file_result != SUCCESS)
     {
-        if (handle_has_error(stream))
-        {
-            handle_printf_error(stream, "Failled to read from %s", file);
-
-            return -1;
-        }
-
-        stream_write(out_stream, buffer, read);
-
-        if (handle_has_error(out_stream))
-        {
-            handle_printf_error(out_stream, "cat: Failled to write to stdout");
-
-            return -1;
-        }
+        printf("Error reading file \"%s\"", file);
+        return -1;
+    } else {
+        // if file is ok
+        
     }
-    
-    // Don't forget to flush the stream
-    stream_flush(out_stream);
+    // Don't forget to free the buffer
+    free(buffer);
 
 
 }
