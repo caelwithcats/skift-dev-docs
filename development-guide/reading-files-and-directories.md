@@ -56,7 +56,7 @@ int main()
 	Directory *directory = directory_open(directory_path, OPEN_READ);
 	DirectoryEntry entry;
 
-    printf("Contents of %s:\n", directory_path);
+   	printf("Contents of %s:\n", directory_path);
 	while (directory_read(directory, &entry) > 0)
 	{
         printf("%s\n", entry.name);
