@@ -1,4 +1,4 @@
-# Development
+# Development Guide
 
 Help skiftOS out by contributing code.
 
