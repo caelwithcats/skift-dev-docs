@@ -59,8 +59,8 @@ int main()
    	printf("Contents of %s:\n", directory_path);
 	while (directory_read(directory, &entry) > 0)
 	{
-        printf("%s\n", entry.name);
-    }
+       		printf("%s\n", entry.name);
+    	}
     return 0;
 }
 ```
