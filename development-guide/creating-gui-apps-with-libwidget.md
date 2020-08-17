@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 }
 ```
 **.build.mk**
-```
+```js
 APPS += HELLO_WORLD
 
 HELLO_WORLD_NAME = hello-world
