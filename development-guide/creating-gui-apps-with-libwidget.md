@@ -10,7 +10,7 @@ This tutorial will cover both ways and show you how to make the hello world appl
 ## Creating a GUI - method 1
 
 **main.cpp**
-```
+```c++
 #include <libwidget/Application.h>
 #include <libwidget/Widgets.h>
 
@@ -29,6 +29,19 @@ int main(int argc, char **argv)
     new Label(window_root(window), "Hello World!", Position::CENTER);
     auto button = new Button(window_root(window), BUTTON_TEXT, "Click Me!");
     
-    
+    button->on(Event::ACTION, [](auto) {
+         dialog_message(Icon::get("close"), "Hi", "You clicked me", DIALOG_BUTTON_OK);
+    });
+    return 0;
 }
 ```
+**.build.mk**
+```
+APPS += HELLO_WORLD
+
+HELLO_WORLD_NAME = hello-world
+HELLO_WORLD_LIBS = widget graphic json
+HELLO_WORLD_ICONS = application
+```
+## Creating a GUI - method 2
+unfinished
