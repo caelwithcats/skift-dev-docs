@@ -2,7 +2,7 @@
 
 There is two ways of creating applications with a user interface in libwidget:
 
-1. only C++ code
+1. only with C++ code
 2. with markup language (XML)
 
 This tutorial will cover both ways and show you how to make the hello world application.
