@@ -71,6 +71,7 @@ This method involves using a markup file. This is the fastest way to build libwi
 ```c++
 #include <libwidget/Application.h>
 #include <libwidget/Widgets.h>
+#include <libwidget/Markup.h>
 #include <libwidget/dialog/Dialog.h>
 
 int main(int argc, char **argv)
@@ -82,7 +83,7 @@ int main(int argc, char **argv)
     
     // Get a pointer to the button
     Button* button = nullptr;
-    if ((version_label = (Button*)window_get_widget_by_id(window, "button")))
+    if ((button = (Button*)window_get_widget_by_id(window, "button")))
     {
         button->on(Event::ACTION, [](auto) {
             dialog_message(Icon::get("close"), "Hi", "You clicked me", DIALOG_BUTTON_OK);
