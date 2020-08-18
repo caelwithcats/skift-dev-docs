@@ -4,7 +4,7 @@ Manual entries are put in /System/Manuals. To create one make a file called `[EN
 
 ```json
 {
-    "description": "put the description of the application here",
+    "description": "put the description of the application here. eg. reverses a given word",
     "usage": "usage data here. eg. command [PARAMETER]",
     "example": "an example on how to use use it. eg command hello: olleh. The output of the command is not required"
 }
