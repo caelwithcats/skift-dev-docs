@@ -42,7 +42,7 @@ int main()
 
 The steps for creating a directory are very simple:
 
-```
+```c++
 #include <cstdio>
 #include <libsystem/io/Filesystem.h>
 
