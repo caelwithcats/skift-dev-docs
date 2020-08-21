@@ -6,6 +6,9 @@ The world's most famous computer program
 
 int main(int argc, char **argv)
 {
+    __unused(argc);
+    __unused(argv);
+
     printf("Hello World!\n");
 
     return 0;
