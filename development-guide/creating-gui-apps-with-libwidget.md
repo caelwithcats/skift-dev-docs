@@ -23,8 +23,8 @@ int main(int argc, char **argv)
     Window *window = window_create(WINDOW_RESIZABLE);
 
     // The insets are the padding
-    window_root(window)->insets(Insets(8));
-    window_root(window)->layout(VFLOW(0));
+    window->root()->insets(Insets(8));
+    window->root()->layout(VFLOW(0));
     window_set_icon(window, Icon::get("application"));
     window_set_title(window, "Hello World!");
     window_set_size(window, Vec2i(500, 400));
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     button->on(Event::ACTION, [](auto) {
          dialog_message(Icon::get("close"), "Hi", "You clicked me", DIALOG_BUTTON_OK);
     });
-    window_show(window);
+    window->show();
 
     return application_run();
 }
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
             dialog_message(Icon::get("close"), "Hi", "You clicked me", DIALOG_BUTTON_OK);
         });
     }
-    window_show(window);
+    window->show();
 
     return application_run();
 }
