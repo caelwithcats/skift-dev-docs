@@ -1,6 +1,6 @@
 # Introduction to creating GUI applications with libwidget
 
-There is two ways of creating applications with a user interface in libwidget:
+There are two ways of creating graphical user interfaces (GUI) applications in libwidget:
 
 1. only with C++ code
 2. with markup language (XML)
