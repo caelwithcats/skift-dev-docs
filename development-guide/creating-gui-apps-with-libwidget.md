@@ -25,9 +25,9 @@ int main(int argc, char **argv)
     // The insets are the padding
     window->root()->insets(Insets(8));
     window->root()->layout(VFLOW(0));
-    window_set_icon(window, Icon::get("application"));
-    window_set_title(window, "Hello World!");
-    window_set_size(window, Vec2i(500, 400));
+    window->icon(Icon::get("application"));
+    window->title("Hello World!");
+    window->size(Vec2i(500, 400));
 
     // Create widgets
     new Label(window_root(window), "Hello World!", Position::CENTER);
