@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     application_initialize(argc, argv);
 
     // This is the main window
-    Window *window = window_create(WINDOW_RESIZABLE);
+    Window *window = new Window(WINDOW_RESIZABLE);
 
     // The insets are the padding
     window->root()->insets(Insets(8));
