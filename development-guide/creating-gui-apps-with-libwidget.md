@@ -30,8 +30,8 @@ int main(int argc, char **argv)
     window->size(Vec2i(500, 400));
 
     // Create widgets
-    new Label(window_root(window), "Hello World!", Position::CENTER);
-    auto button = new Button(window_root(window), BUTTON_FILLED, "Click Me!");
+    new Label(window->root(), "Hello World!", Position::CENTER);
+    auto button = new Button(window->root(), BUTTON_FILLED, "Click Me!");
 
     button->on(Event::ACTION, [](auto) {
          dialog_message(Icon::get("close"), "Hi", "You clicked me", DIALOG_BUTTON_OK);
