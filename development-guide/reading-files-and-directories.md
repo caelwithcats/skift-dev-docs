@@ -6,7 +6,7 @@ Reading files/folders is quite simple. Here's a guide on how to do it.
 This example shows how to read a file and print it to the console
 
 ```c++
-#include <cstdio>
+#include <libsystem/io/Stream.h>
 #include <libsystem/Result.h>
 #include <libsystem/io/File.h>
 
@@ -46,7 +46,7 @@ int main()
 
 This code will list the contents of a folder:
 ```c++
-#include <cstdio>
+#include <libsystem/io/Stream.h>
 #include <libsystem/io/Directory.h>
 
 int main()
